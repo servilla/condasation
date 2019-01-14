@@ -76,7 +76,8 @@ def list_channels(base_url: str):
         click.echo(a.text)
 
 
-channels_help = 'Comma separerate list of Anaconda channels to evaluate (default: linux-64,win-64)'
+channels_help = ('Comma separated list of Anaconda channels to evaluate '
+                 '(default: linux-64,win-64)')
 env_help = 'Evnironment file to inspect (default: environment.yml)'
 fix_help = 'Output a corrected version of the Conda export file'
 list_help = 'List available Anaconda channels then exit ignoring other commands'
