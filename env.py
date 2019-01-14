@@ -76,7 +76,6 @@ def list_channels(base_url: str):
         click.echo(a.text)
 
 
-base_url = 'https://repo.anaconda.com/pkgs/main'
 channels_help = 'Comma separerate list of Anaconda channels to evaluate (default: linux-64,win-64)'
 env_help = 'Evnironment file to inspect (default: environment.yml)'
 fix_help = 'Output a corrected version of the Conda export file'
@@ -93,6 +92,8 @@ def env(channels: str, env: str, fix: bool, list: bool):
        distributions - this generally means the package is a specific upstream
        OS package that can be removed from the environment.yml file.
     """
+
+    base_url = 'https://repo.anaconda.com/pkgs/main'
 
     if list:
         list_channels(base_url=base_url)
